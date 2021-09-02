@@ -34,7 +34,8 @@ class Penjualan {
 
   void cetakNota() {
     System.out.println("NOTA PEMBELIAN");
-    System.out.println(nama);
+    System.out.println("Barang = "+nama);
+    System.out.print("Jenis = ");
     switch (kode){
       case "A" -> System.out.println("Alat Rumah tangga");
       case "B" -> System.out.println("Elektronik");
@@ -53,6 +54,7 @@ public class JualAPP {
     Scanner userinput = new Scanner(System.in);
     System.out.print("Nama Barang \t=");
     String nama = userinput.nextLine();
+    System.out.println("A = Alat Rumah Tangga\t B= Elektronik \t C= Kebutuhan Sekolah\t D= Alat Bangunan\t E= DLL");
     System.out.print("Kode Barang \t=");
     String kode = userinput.nextLine();
     System.out.print("Jumlah Barang \t=");
@@ -62,9 +64,7 @@ public class JualAPP {
     kasir.setData(kode, nama, jumlah, harga);
     kasir.cetakNota();
     userinput.close();
-
-
-
+    
 
   }
 }
