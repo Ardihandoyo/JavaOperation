@@ -31,8 +31,17 @@ class Penjualan {
     return bonus;
   }
 
+
   void cetakNota() {
     System.out.println("NOTA PEMBELIAN");
+    System.out.println(nama);
+    switch (kode){
+      case "A" -> System.out.println("Alat Rumah tangga");
+      case "B" -> System.out.println("Elektronik");
+      case "C" -> System.out.println("Kebutuhan Sekolah ");
+      case "D" -> System.out.println("Alat Bangunan");
+      case "E" -> System.out.println("DLL");
+    }
     System.out.println("Jumlah Semua Harga \t" + getJumlah());
     System.out.println("Bonus \t" + getBonus());
   }
@@ -53,6 +62,8 @@ public class JualAPP {
     kasir.setData(kode, nama, jumlah, harga);
     kasir.cetakNota();
     userinput.close();
+
+
 
 
   }
